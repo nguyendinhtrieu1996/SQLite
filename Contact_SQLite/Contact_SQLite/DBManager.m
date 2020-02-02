@@ -49,16 +49,16 @@
 - (void)_copyDatabaseIntoDocumentsDirectory {
     AssertNonNull(self.databaseFileName);
     
-    NSString *destinationPath = [self.documentsDirectory stringByAppendingString:self.databaseFileName];
+    NSString *destinationPath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFileName];
     
     if (destinationPath && NO == [[NSFileManager defaultManager] fileExistsAtPath:destinationPath]) {
-        NSString *sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:self.databaseFileName];
+        NSString *sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:self.databaseFileName];
         AssertNonNull(sourcePath);
         
         NSError *error;
         [[NSFileManager defaultManager] copyItemAtPath:sourcePath toPath:destinationPath error:&error];
         if (error != nil) {
-            DEBUG_LOG(@"Copy Database error %@", [error localizedDescription]);
+            DEBUG_LOG(@"TRIEUND 2 >> Copy Database error %@", [error localizedDescription]);
         }
     }
 }

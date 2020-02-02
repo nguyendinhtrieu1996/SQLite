@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2719093023E6790A00FDD254 /* EditInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2719092F23E6790A00FDD254 /* EditInfoViewController.m */; };
+		2719093323E6834F00FDD254 /* Contact.sql in Resources */ = {isa = PBXBuildFile; fileRef = 2719093223E6834F00FDD254 /* Contact.sql */; };
 		27C94C2823E5970D00DA6456 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C94C2723E5970D00DA6456 /* AppDelegate.m */; };
 		27C94C2B23E5970D00DA6456 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C94C2A23E5970D00DA6456 /* ViewController.m */; };
 		27C94C2E23E5970D00DA6456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C94C2C23E5970D00DA6456 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		2719092E23E6790A00FDD254 /* EditInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditInfoViewController.h; sourceTree = "<group>"; };
 		2719092F23E6790A00FDD254 /* EditInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditInfoViewController.m; sourceTree = "<group>"; };
+		2719093223E6834F00FDD254 /* Contact.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = Contact.sql; sourceTree = "<group>"; };
 		27C94C2323E5970D00DA6456 /* Contact_SQLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contact_SQLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C94C2623E5970D00DA6456 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		27C94C2723E5970D00DA6456 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		27C94C1A23E5970D00DA6456 = {
 			isa = PBXGroup;
 			children = (
+				2719093223E6834F00FDD254 /* Contact.sql */,
 				27C94C2523E5970D00DA6456 /* Contact_SQLite */,
 				27C94C2423E5970D00DA6456 /* Products */,
 				27C94C3C23E5973000DA6456 /* Frameworks */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C94C3323E5970E00DA6456 /* LaunchScreen.storyboard in Resources */,
+				2719093323E6834F00FDD254 /* Contact.sql in Resources */,
 				27C94C3023E5970E00DA6456 /* Assets.xcassets in Resources */,
 				27C94C2E23E5970D00DA6456 /* Main.storyboard in Resources */,
 			);

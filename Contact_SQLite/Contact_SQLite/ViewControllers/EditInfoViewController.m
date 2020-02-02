@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *ageTextField;
 
+@property (strong, nonatomic) DBManager *dbManager;
+
 @end // @interface EditInfoViewController ()
 
 
@@ -26,7 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _dbManager = [[DBManager alloc] initWithDatabaseName:@"Contact.sql"];
 }
 
 - (IBAction)touchInSaveButton:(id)sender {

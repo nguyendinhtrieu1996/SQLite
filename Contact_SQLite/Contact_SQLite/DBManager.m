@@ -51,6 +51,8 @@
     
     NSString *destinationPath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFileName];
     
+    DEBUG_LOG(@"DB path = %@", destinationPath);
+    
     if (destinationPath && NO == [[NSFileManager defaultManager] fileExistsAtPath:destinationPath]) {
         NSString *sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:self.databaseFileName];
         AssertNonNull(sourcePath);
@@ -58,7 +60,7 @@
         NSError *error;
         [[NSFileManager defaultManager] copyItemAtPath:sourcePath toPath:destinationPath error:&error];
         if (error != nil) {
-            DEBUG_LOG(@"TRIEUND 2 >> Copy Database error %@", [error localizedDescription]);
+            DEBUG_LOG(@"Copy Database error %@", [error localizedDescription]);
         }
     }
 }
@@ -72,6 +74,7 @@
 }
 
 - (void)executeQuery:(NSString *)query {
+    AssertNonNull(query);
     [self runQuery:[query UTF8String] isQueryExecutable:YES];
 }
 
@@ -93,8 +96,9 @@
     self.arrColumnNames = [[NSMutableArray alloc] init];
     
     sqlite3 *sqlite3Database;
-    NSString *databasePath = [self.documentsDirectory stringByAppendingString:self.databaseFileName];
-    int openDatabaseResult = sqlite3_open([databasePath UTF8String], &sqlite3Database);
+    NSString *databasePath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFileName];
+    
+    int openDatabaseResult = sqlite3_open_v2([databasePath UTF8String], &sqlite3Database, SQLITE_OPEN_READWRITE, NULL);
     
     if (openDatabaseResult == SQLITE_OK) {
         sqlite3_stmt *compiledStatement;

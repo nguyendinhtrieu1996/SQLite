@@ -10,7 +10,7 @@
 #define CommonMacros_h
 
 #if DEBUG
-#define DEBUG_LOG(arguments, ...)  NSLog(@"%s(%d): " arguments, __FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define DEBUG_LOG(arguments, ...)  NSLog(@"TRIEUND2 >> %s(%d): " arguments, __FUNCTION__, __LINE__, ##__VA_ARGS__)
 #else // DEBUG
 #define DEBUG_LOG {}
 #endif // DEBUG

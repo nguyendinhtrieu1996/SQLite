@@ -39,7 +39,19 @@
         return;
     }
     
+    NSString *query = [NSString stringWithFormat:@"insert into peopleInfo values(null, '%@', '%@', %d)",
+                       self.firstNameTextField.text,
+                       self.lastNameTextField.text,
+                       [self.ageTextField.text intValue]];
     
+    [self.dbManager executeQuery:query];
+    
+    if (self.dbManager.affectedRows != 0) {
+        DEBUG_LOG(@"Query was execute successfully. Affected row = %d", self.dbManager.affectedRows);
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        DEBUG_LOG(@"Clould not execute the query '%@'", query);
+    }
 }
 
 @end // @implementation EditInfoViewController

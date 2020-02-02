@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2719093023E6790A00FDD254 /* EditInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2719092F23E6790A00FDD254 /* EditInfoViewController.m */; };
 		27C94C2823E5970D00DA6456 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C94C2723E5970D00DA6456 /* AppDelegate.m */; };
 		27C94C2B23E5970D00DA6456 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C94C2A23E5970D00DA6456 /* ViewController.m */; };
 		27C94C2E23E5970D00DA6456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C94C2C23E5970D00DA6456 /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2719092E23E6790A00FDD254 /* EditInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditInfoViewController.h; sourceTree = "<group>"; };
+		2719092F23E6790A00FDD254 /* EditInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditInfoViewController.m; sourceTree = "<group>"; };
 		27C94C2323E5970D00DA6456 /* Contact_SQLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contact_SQLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C94C2623E5970D00DA6456 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		27C94C2723E5970D00DA6456 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -46,6 +49,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2719093123E6792400FDD254 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				27C94C2923E5970D00DA6456 /* ViewController.h */,
+				27C94C2A23E5970D00DA6456 /* ViewController.m */,
+				2719092E23E6790A00FDD254 /* EditInfoViewController.h */,
+				2719092F23E6790A00FDD254 /* EditInfoViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		27C94C1A23E5970D00DA6456 = {
 			isa = PBXGroup;
 			children = (
@@ -66,10 +80,9 @@
 		27C94C2523E5970D00DA6456 /* Contact_SQLite */ = {
 			isa = PBXGroup;
 			children = (
+				2719093123E6792400FDD254 /* ViewControllers */,
 				27C94C2623E5970D00DA6456 /* AppDelegate.h */,
 				27C94C2723E5970D00DA6456 /* AppDelegate.m */,
-				27C94C2923E5970D00DA6456 /* ViewController.h */,
-				27C94C2A23E5970D00DA6456 /* ViewController.m */,
 				27C94C2C23E5970D00DA6456 /* Main.storyboard */,
 				27C94C2F23E5970E00DA6456 /* Assets.xcassets */,
 				27C94C3123E5970E00DA6456 /* LaunchScreen.storyboard */,
@@ -160,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2719093023E6790A00FDD254 /* EditInfoViewController.m in Sources */,
 				27C94C2B23E5970D00DA6456 /* ViewController.m in Sources */,
 				27C94C3623E5970E00DA6456 /* main.m in Sources */,
 				27C94C2823E5970D00DA6456 /* AppDelegate.m in Sources */,

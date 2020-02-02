@@ -10,8 +10,8 @@
 
 #import "DBManager.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 
-@end
+@end // @interface ViewController
 

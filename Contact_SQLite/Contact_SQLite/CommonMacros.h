@@ -17,5 +17,8 @@
 
 #define AssertNonNull(obj) NSAssert(obj != nil, @"Argument " @#obj " must be non null")
 
+#define IS_NON_EMPTY_STRING(str) (str != nil && [str isKindOfClass:[NSString class]] && str.length > 0)
+
+#define IS_EMPTY_STRING(str) !(IS_NON_EMPTY_STRING(str))
 
 #endif /* CommonMacros_h */
